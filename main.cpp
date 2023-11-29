@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Phone
+{
+    public:
+        int charge;
+        Phone() {
+            charge = 100;
+        }
+        void use() {
+            charge -=10;
+        }
+        void getCharge() {
+            cout << charge;
+        }
+};
+
+int main() {
+    Phone p;
+    p.use();
+    Phone *ptr = &p;
+    
+    //call the getCharge() method on ptr
+    
+    ptr->getCharge();
+    
+    //This one shows the same answer but it could be because Sololearn wanted us to access the member through a pointer instead.
+    //p.getCharge();
+    
+} 
